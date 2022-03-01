@@ -148,9 +148,22 @@
 #         return res
 
 # 7 REVERSE INTEGER
-def reverse(x: int):
-    for i in x:
-        print(i)
 
 
-reverse(123)
+# 9 PALINDROME NUMBER
+
+def isPalindrome(x: int):
+    s = str(x)
+    l = 0
+    r = len(s) - 1
+    while l < r:
+        if s[l] != s[r]:
+            return False
+        else:
+            print(s[l], s[r])
+            l += 1
+            r -= 1
+    return True
+
+
+print(isPalindrome(215616512))
